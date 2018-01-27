@@ -1,11 +1,12 @@
 'use strict';
 
-const Queue = require('../lib/queue');
+const Queue = require(`${__dirname}'/../lib/queue`);
 
 describe('Queue class', () => {
   beforeEach( () => {
     this.queue = new Queue();
   });
+
   it('queue module should exist', () => {
     expect(Queue).toBeDefined();
   });
@@ -19,6 +20,7 @@ describe('Queue class', () => {
       expect(this.queue.head).toBeNull();
       expect(this.queue.tail).toBeNull();
     });
+
     it('Should add a value to the beginning of a new the queue and set the tail to the new node', () => {
       this.queue.enqueue(7);
       expect(this.queue.head.value).toEqual(7);
@@ -61,7 +63,7 @@ describe('Queue class', () => {
     it('Should retrun null when attempting to  dequeue an empty queue', () => {
       expect(this.queue.dequeue()).toBeNull();
     });
-    
+
   });
 
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-const Stack = require('../lib/stack');
+const Stack = require(`${__dirname}'/../lib/stack`);
 
 describe('Stack class', () => {
   beforeEach( () => {

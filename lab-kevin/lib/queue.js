@@ -28,9 +28,11 @@ module.exports = class {
     //iterate the link list until you find the first from end
     for(var node = this.head; node.next.next; node = node.next);
     //remove the last node before adding updating the tail
+    let last_value = node.next.value;
     node.next = null;
     //set the last item to the tail
     this.tail = node;
     this.size--;
+    return last_value;
   }
 };

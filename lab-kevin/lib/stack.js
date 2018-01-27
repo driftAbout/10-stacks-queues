@@ -1,6 +1,6 @@
 'use strict';
 
-const Nd = require('./nd');
+const Nd = require(`${__dirname}/nd`);
 
 module.exports = class {
 
@@ -27,7 +27,7 @@ module.exports = class {
     let top_next = cur_top.next;
     this.top = top_next;
     this.size--;
-    return cur_top;
+    return cur_top.val;
   }
   
 
