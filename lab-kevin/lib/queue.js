@@ -21,6 +21,7 @@ module.exports = class {
     this.size++;
     return this;
   }
+  //  Big-O: O(1) 
 
   dequeue() {
     //if this.head is undefined, return this
@@ -35,4 +36,6 @@ module.exports = class {
     this.size--;
     return last_value;
   }
+//  Big-O: O(n) 
+
 };

@@ -19,6 +19,7 @@ module.exports = class {
     this.size++;
     return true;
   }
+  //  Big-O: O(1) 
   
   
   pop(){
@@ -29,11 +30,12 @@ module.exports = class {
     this.size--;
     return cur_top.val;
   }
+  //  Big-O: O(1) 
   
 
   peek(){
     return this.top.value;
   }
-
+  //  Big-O: O(1) 
 
 };

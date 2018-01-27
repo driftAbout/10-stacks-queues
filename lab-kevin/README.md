@@ -8,9 +8,23 @@
 - Both modules share a Node class module.
   
 >## Install
+    The project has the following development dependencies:
+    
+    "debug": "^3.1.0"
+
+    "eslint": "^4.16.0"
+
+    "jest": "^22.1.4"
+
 
 ```bash
 npm i 
+```
+
+  - Run the tests!
+
+```bash
+    npm test
 ```
 
 >## Usage
