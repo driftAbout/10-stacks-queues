@@ -1,6 +1,6 @@
 'use strict';
 
-const Nd = require('./nd');
+const Nd = require(`${__dirname}/nd`);
 
 module.exports = class {
 
@@ -11,13 +11,15 @@ module.exports = class {
   }
 
   push(val){
-    if (this.size === this.max_size) return new Error('Stack Overflow: Stack is at Max-size');
+    if(val === undefined) throw new Error('Invalid input: Value is undefined');
+    if (this.size === this.max_size) throw new Error('Stack Overflow: Stack is at Max-size');
     let nd = new Nd(val);
     nd.next = this.top;
     this.top = nd;
     this.size++;
     return true;
   }
+  //  Big-O: O(1) 
   
   
   pop(){
@@ -26,13 +28,14 @@ module.exports = class {
     let top_next = cur_top.next;
     this.top = top_next;
     this.size--;
-    return cur_top;
+    return cur_top.val;
   }
+  //  Big-O: O(1) 
   
 
   peek(){
-    return this.top;
+    return this.top.value;
   }
-
+  //  Big-O: O(1) 
 
 };
