@@ -11,7 +11,8 @@ module.exports = class {
   }
 
   push(val){
-    if (this.size === this.max_size) return new Error('Stack Overflow: Stack is at Max-size');
+    if(val === undefined) throw new Error('Invalid input: Value is undefined');
+    if (this.size === this.max_size) throw new Error('Stack Overflow: Stack is at Max-size');
     let nd = new Nd(val);
     nd.next = this.top;
     this.top = nd;
@@ -31,7 +32,7 @@ module.exports = class {
   
 
   peek(){
-    return this.top;
+    return this.top.value;
   }
 
 
