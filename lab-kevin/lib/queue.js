@@ -7,6 +7,9 @@ module.exports = class {
     this.tail = null;
     this.max_size = max_size;
     this.size = 0;
+
+    //this.front
+    //this.back
   }
 
   enqueue(val) {
@@ -20,6 +23,10 @@ module.exports = class {
     if(!this.tail) this.tail = nd;
     this.size++;
     return this;
+
+    //this.back.next;
+    //this.back = node;
+
   }
   //  Big-O: O(1) 
 
@@ -35,7 +42,17 @@ module.exports = class {
     this.tail = node;
     this.size--;
     return last_value;
+
+    //let temp = this.front;
+    //this.front = this.front.next;
+    //temp.next. = null;
+    //return temp
   }
 //  Big-O: O(n) 
 
 };
+
+
+this.front
+this.back
+
